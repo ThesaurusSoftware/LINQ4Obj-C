@@ -31,11 +31,11 @@
 /**
  Skips elements up to a specified position in a collection.
  */
-- (NSArray *)linq_skip:(NSInteger)count;
+- (NSArray *)linq_skip:(NSUInteger)count;
 
 /**
  Takes elements up to a specified position in a collection.
  */
-- (NSArray *)linq_take:(NSInteger)count;
+- (NSArray *)linq_take:(NSUInteger)count;
 
 @end
