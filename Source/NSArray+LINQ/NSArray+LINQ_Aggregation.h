@@ -36,7 +36,7 @@
 /**
  Calculates the average value of a collection of values.
  */
-- (id)linq_avg;
+- (NSDecimalNumber *)linq_avg;
 
 /**
  Calculates the average value of the attribute specified

@@ -40,10 +40,10 @@
     return accumulator;
 }
 
-- (id)linq_avg {
+- (NSDecimalNumber *)linq_avg {
     if ([self _isEmpty]) return [NSDecimalNumber zero];
     
-    id sum = [self linq_sum];
+    NSDecimalNumber *sum = [self linq_sum];
     NSDecimalNumber *result = [NSDecimalNumber decimalNumberWithDecimal:[sum decimalValue]];
     NSDecimalNumber *count = [NSDecimalNumber decimalNumberWithDecimal:
                               [[NSNumber numberWithInteger:[self count]] decimalValue]];
@@ -83,10 +83,10 @@
     return [self _aux_applyOperator:@"@min" toKey:key];
 }
 
-- (id)linq_sum {
+- (NSDecimalNumber *)linq_sum {
     if ([self _isEmpty]) return [NSDecimalNumber zero];
     
-    return [self linq_aggregate:^id(id item, id aggregate) {
+    return [self linq_aggregate:^id(NSNumber *item, NSNumber *aggregate) {
         NSDecimalNumber *acc = [NSDecimalNumber
                                 decimalNumberWithDecimal:[aggregate decimalValue]];
         return [acc decimalNumberByAdding:[NSDecimalNumber
