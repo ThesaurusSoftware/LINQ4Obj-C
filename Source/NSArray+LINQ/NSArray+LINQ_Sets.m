@@ -23,6 +23,7 @@
 //  THE SOFTWARE.
 //
 
+#import "NSArray+LINQ_Sets.h"
 
 @implementation NSArray (LINQ_Sets)
 
